@@ -43,42 +43,7 @@
  */
 #}
 <div class="vision25-shell">
-  <header class="vision25-header glass-card-elevated" role="banner">
-    <div class="section-container vision25-header__inner">
-      <a class="vision25-brand" href="{{ front_page }}">
-        <span class="vision25-brand__prefix">V25</span>
-        <span class="vision25-brand__name">{{ vision25_site_name }}</span>
-      </a>
-
-      <button
-        class="vision25-mobile-toggle"
-        type="button"
-        data-vision25-nav-toggle
-        aria-expanded="false"
-        aria-controls="vision25-primary-nav"
-      >
-        <span class="visually-hidden">{{ 'Toggle navigation'|t }}</span>
-        <span class="vision25-mobile-toggle__bar"></span>
-        <span class="vision25-mobile-toggle__bar"></span>
-      </button>
-
-      <nav
-        class="vision25-nav"
-        id="vision25-primary-nav"
-        aria-label="{{ 'Main navigation'|t }}"
-        data-vision25-nav
-      >
-        {% for item in vision25_main_menu_items %}
-          <a
-            class="vision25-nav__link{{ item.is_active ? ' is-active' : '' }}"
-            href="{{ item.url }}"
-          >
-            {{ item.title }}
-          </a>
-        {% endfor %}
-      </nav>
-    </div>
-  </header>
+  {% include '@vision25/layout/vision25-site-header.html.twig' with { nav_id: 'vision25-primary-nav' } %}
 
   {{ page.highlighted }}
   {{ page.help }}

@@ -13,7 +13,7 @@ use Drupal\Core\Block\Attribute\Block;
 /**
  * Provides the labs grid block.
  */
-final class Vision25LabsGridBlock extends AbstractVision25Block {
+final class Vision25LabsGridBlock extends AbstractVision25RepositoryBlock {
 
   /**
    * {@inheritdoc}

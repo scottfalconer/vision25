@@ -13,7 +13,7 @@ use Drupal\Core\Block\Attribute\Block;
 /**
  * Provides the agenda schedule block.
  */
-final class Vision25AgendaScheduleBlock extends AbstractVision25Block {
+final class Vision25AgendaScheduleBlock extends AbstractVision25RepositoryBlock {
 
   /**
    * {@inheritdoc}

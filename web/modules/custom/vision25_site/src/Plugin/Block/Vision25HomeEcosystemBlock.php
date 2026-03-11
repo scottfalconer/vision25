@@ -14,7 +14,7 @@ use Drupal\Core\Url;
 /**
  * Provides the home ecosystem block.
  */
-final class Vision25HomeEcosystemBlock extends AbstractVision25Block {
+final class Vision25HomeEcosystemBlock extends AbstractVision25RepositoryBlock {
 
   /**
    * {@inheritdoc}

@@ -13,7 +13,7 @@ use Drupal\Core\Block\Attribute\Block;
 /**
  * Provides the timeline explorer block.
  */
-final class Vision25TimelineExplorerBlock extends AbstractVision25Block {
+final class Vision25TimelineExplorerBlock extends AbstractVision25RepositoryBlock {
 
   /**
    * {@inheritdoc}

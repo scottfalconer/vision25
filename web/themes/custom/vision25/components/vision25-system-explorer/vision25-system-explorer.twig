@@ -1,10 +1,10 @@
 {% set boxes = [
-  {'label': box_hero_label, 'style': 'top: 5%; left: 5%; width: 90%; height: 18%;'},
-  {'label': box_header_label, 'style': 'top: 26%; left: 10%; width: 80%; height: 8%;'},
-  {'label': box_triangle_label, 'style': 'top: 36%; left: 20%; width: 60%; height: 16%;'},
-  {'label': box_bento_label, 'style': 'top: 55%; left: 5%; width: 90%; height: 20%;'},
-  {'label': box_cta_label, 'style': 'top: 78%; left: 5%; width: 90%; height: 10%;'},
-  {'label': box_timeline_label, 'style': 'top: 90%; left: 10%; width: 80%; height: 8%;'},
+  {'label': box_hero_label, 'modifier': 'vision25-system-overlay__box--hero'},
+  {'label': box_header_label, 'modifier': 'vision25-system-overlay__box--header'},
+  {'label': box_triangle_label, 'modifier': 'vision25-system-overlay__box--triangle'},
+  {'label': box_bento_label, 'modifier': 'vision25-system-overlay__box--bento'},
+  {'label': box_cta_label, 'modifier': 'vision25-system-overlay__box--cta'},
+  {'label': box_timeline_label, 'modifier': 'vision25-system-overlay__box--timeline'},
 ] %}
 
 <section{{ attributes.addClass('vision25-page-section', 'vision25-page-section--tight-top', 'safe-frame') }}>
@@ -48,7 +48,7 @@
 
       <div class="vision25-system-overlay is-hidden" data-toggle-item="system">
         {% for box in boxes %}
-          <div class="vision25-system-overlay__box" style="{{ box.style }}">
+          <div class="vision25-system-overlay__box {{ box.modifier }}">
             <span class="vision25-system-overlay__label">{{ box.label }}</span>
           </div>
         {% endfor %}

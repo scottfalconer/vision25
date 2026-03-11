@@ -8,7 +8,6 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\vision25_site\Vision25Repository;
 use Drupal\webform\WebformInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -25,7 +24,6 @@ abstract class AbstractVision25Block extends BlockBase implements ContainerFacto
     array $configuration,
     $plugin_id,
     $plugin_definition,
-    protected readonly Vision25Repository $repository,
     protected readonly EntityTypeManagerInterface $entityTypeManager,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -39,7 +37,6 @@ abstract class AbstractVision25Block extends BlockBase implements ContainerFacto
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('vision25_site.repository'),
       $container->get('entity_type.manager'),
     );
   }

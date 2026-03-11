@@ -1,35 +1,3 @@
-block.settings.vision25_section_intro:
-  type: block_settings
-  label: 'Vision 25 section intro block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    page_label:
-      type: string
-    title:
-      type: string
-    subtitle:
-      type: string
-    layout:
-      type: string
-
-block.settings.vision25_home_hero:
-  type: block_settings
-  label: 'Vision 25 home hero block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    hero_eyebrow:
-      type: string
-    hero_title:
-      type: string
-    hero_subtitle:
-      type: string
-    hero_cta_label:
-      type: string
-    hero_cta_url:
-      type: string
-
 block.settings.vision25_home_ecosystem:
   type: block_settings
   label: 'Vision 25 home ecosystem block'
@@ -41,49 +9,6 @@ block.settings.vision25_home_ecosystem:
     ecosystem_title:
       type: string
     ecosystem_subtitle:
-      type: string
-
-block.settings.vision25_media_interlude:
-  type: block_settings
-  label: 'Vision 25 media interlude block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    image_filename:
-      type: string
-    image_alt:
-      type: string
-
-block.settings.vision25_story_section:
-  type: block_settings
-  label: 'Vision 25 story section block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    section_label:
-      type: string
-    section_title:
-      type: string
-    body_primary:
-      type: string
-    body_secondary:
-      type: string
-    background_variant:
-      type: string
-
-block.settings.vision25_cta_band:
-  type: block_settings
-  label: 'Vision 25 CTA band block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    title:
-      type: string
-    subtitle:
-      type: string
-    cta_label:
-      type: string
-    cta_url:
       type: string
 
 block.settings.vision25_track_section:
@@ -113,72 +38,4 @@ block.settings.vision25_register_form:
     FullyValidatable: ~
   mapping:
     note:
-      type: string
-
-block.settings.vision25_system_explorer:
-  type: block_settings
-  label: 'Vision 25 system explorer block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    visitor_button_label:
-      type: string
-    system_button_label:
-      type: string
-    visitor_hero_label:
-      type: string
-    visitor_header_label:
-      type: string
-    visitor_triangle_label:
-      type: string
-    visitor_bento_card_one_label:
-      type: string
-    visitor_bento_card_two_label:
-      type: string
-    visitor_bento_card_three_label:
-      type: string
-    visitor_cta_label:
-      type: string
-    visitor_timeline_label:
-      type: string
-    box_hero_label:
-      type: string
-    box_header_label:
-      type: string
-    box_triangle_label:
-      type: string
-    box_bento_label:
-      type: string
-    box_cta_label:
-      type: string
-    box_timeline_label:
-      type: string
-
-block.settings.vision25_system_content_model:
-  type: block_settings
-  label: 'Vision 25 system content model block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    content_model_title:
-      type: string
-    quote:
-      type: string
-    relationship_1_from:
-      type: string
-    relationship_1_label:
-      type: string
-    relationship_1_to:
-      type: string
-    relationship_2_from:
-      type: string
-    relationship_2_label:
-      type: string
-    relationship_2_to:
-      type: string
-    relationship_3_from:
-      type: string
-    relationship_3_label:
-      type: string
-    relationship_3_to:
       type: string

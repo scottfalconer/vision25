@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
-
 :root {
   --background: hsl(204 20% 97%);
   --foreground: hsl(207 30% 9%);
@@ -936,6 +934,48 @@ img {
   position: absolute;
   border: 2px solid var(--silver-blue);
   border-radius: 0.75rem;
+}
+
+.vision25-system-overlay__box--hero {
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 18%;
+}
+
+.vision25-system-overlay__box--header {
+  top: 26%;
+  left: 10%;
+  width: 80%;
+  height: 8%;
+}
+
+.vision25-system-overlay__box--triangle {
+  top: 36%;
+  left: 20%;
+  width: 60%;
+  height: 16%;
+}
+
+.vision25-system-overlay__box--bento {
+  top: 55%;
+  left: 5%;
+  width: 90%;
+  height: 20%;
+}
+
+.vision25-system-overlay__box--cta {
+  top: 78%;
+  left: 5%;
+  width: 90%;
+  height: 10%;
+}
+
+.vision25-system-overlay__box--timeline {
+  top: 90%;
+  left: 10%;
+  width: 80%;
+  height: 8%;
 }
 
 .vision25-system-overlay__label {

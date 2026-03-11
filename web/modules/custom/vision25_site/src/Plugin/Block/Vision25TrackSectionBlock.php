@@ -14,7 +14,7 @@ use Drupal\Core\Url;
 /**
  * Provides the track section block.
  */
-final class Vision25TrackSectionBlock extends AbstractVision25Block {
+final class Vision25TrackSectionBlock extends AbstractVision25RepositoryBlock {
 
   /**
    * {@inheritdoc}
