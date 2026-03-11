@@ -11,14 +11,6 @@ Included here:
 - provisioning scripts in `scripts/vision25/`
 - local DDEV config for running the site
 
-Not included in this first pass:
-
-- project docs
-- parity evidence
-- demo artifacts
-- agent guidance files
-- local runtime output, backups, and secrets
-
 ## Quick Start
 
 ```bash
