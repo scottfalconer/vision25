@@ -1,0 +1,46 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Narrative Section
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - section_label
+    - section_title
+    - body_primary
+    - body_secondary
+    - background_variant
+  properties:
+    section_label:
+      type: string
+      title: Section label
+      default: Act I
+      examples:
+        - Act I
+    section_title:
+      type: string
+      title: Section title
+      default: The Flywheel
+      examples:
+        - The Flywheel
+    body_primary:
+      type: string
+      title: Primary paragraph
+      default: ""
+      examples:
+        - For twenty-five years, Drupal has operated as a reinforcing system.
+    body_secondary:
+      type: string
+      title: Secondary paragraph
+      default: ""
+      examples:
+        - This is not a crisis. It is a recalibration.
+    background_variant:
+      type: string
+      title: Background variant
+      default: default
+      examples:
+        - default
+      enum:
+        - default
+        - luminous

@@ -1,0 +1,9 @@
+uuid: 9b054803-d0eb-49af-83f4-4dcf29c549fa
+langcode: en
+status: true
+dependencies: {  }
+name: Webform
+configEntityTypeId: component
+weight: 0
+items:
+  - block.webform_block

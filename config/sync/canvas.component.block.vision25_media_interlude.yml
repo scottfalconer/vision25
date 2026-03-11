@@ -1,0 +1,24 @@
+uuid: f8ad15e3-0242-4c77-a452-2903a9e39183
+langcode: en
+status: true
+dependencies:
+  module:
+    - vision25_site
+active_version: 4fc1d3f2ceff2441
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: vision25_media_interlude
+        label: 'Vision 25 Media Interlude'
+        label_display: '0'
+        provider: vision25_site
+        image_filename: bluehour-beams-011.png
+        image_alt: ''
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 Media Interlude'
+id: block.vision25_media_interlude
+provider: vision25_site
+source: block
+source_local_id: vision25_media_interlude

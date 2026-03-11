@@ -1,0 +1,19 @@
+uuid: ebebcfcf-c000-4366-a5dd-9dd6ebbe0a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.lab
+id: node.lab.field_description
+field_name: field_description
+entity_type: node
+bundle: lab
+label: Description
+description: 'Primary descriptive copy shown on lab cards and in lab detail dialogs.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

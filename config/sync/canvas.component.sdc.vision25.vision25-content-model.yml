@@ -1,0 +1,128 @@
+uuid: d0f1e65a-b83c-4c39-8ff8-3ed1be5fb01d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vision25
+active_version: 26ca5e354057f087
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        content_model_title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Content Model'
+          expression: ℹ︎string␟value
+        quote:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A beautiful flat site is a dead end. A structured system scales for teams.'
+          expression: ℹ︎string␟value
+        relationship_1_from:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Labs
+          expression: ℹ︎string␟value
+        relationship_1_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'referenced by'
+          expression: ℹ︎string␟value
+        relationship_1_to:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Sessions
+          expression: ℹ︎string␟value
+        relationship_2_from:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Sessions
+          expression: ℹ︎string␟value
+        relationship_2_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'categorized by'
+          expression: ℹ︎string␟value
+        relationship_2_to:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Tracks
+          expression: ℹ︎string␟value
+        relationship_3_from:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Milestones
+          expression: ℹ︎string␟value
+        relationship_3_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'tagged Past / Future'
+          expression: ℹ︎string␟value
+        relationship_3_to:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Era
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Content Model'
+id: sdc.vision25.vision25-content-model
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-content-model'

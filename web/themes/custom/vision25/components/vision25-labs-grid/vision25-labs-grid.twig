@@ -1,0 +1,74 @@
+<section{{ attributes.addClass('safe-frame', 'vision25-page-section', 'vision25-page-section--tight-top') }}>
+  <div class="section-container vision25-stack--wide">
+    <div class="vision25-card-grid">
+      {% for lab in labs %}
+        <div id="{{ lab.id }}">
+          <button
+            class="vision25-card vision25-card--media glass-card-elevated"
+            type="button"
+            data-dialog-open="#lab-modal-{{ lab.id }}"
+            aria-controls="lab-modal-{{ lab.id }}"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            data-scroll-reveal
+          >
+            <div class="vision25-card__media"><img src="{{ lab.image }}" alt="{{ lab.title }}"></div>
+            <div class="vision25-card__body">
+              <p class="label-mono">{{ lab.track_name }}</p>
+              <h2 class="heading-card">{{ lab.title }}</h2>
+              <p class="vision25-meta">{{ lab.tagline }}</p>
+              <p class="body-base">{{ lab.description }}</p>
+            </div>
+          </button>
+        </div>
+
+        <div
+          class="vision25-modal"
+          data-dialog
+          id="lab-modal-{{ lab.id }}"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="lab-modal-title-{{ lab.id }}"
+          aria-describedby="lab-modal-summary-{{ lab.id }}"
+          hidden
+        >
+          <div class="vision25-modal__panel glass-card-elevated" tabindex="-1">
+            <div class="vision25-modal__image"><img src="{{ lab.image }}" alt="{{ lab.title }}"></div>
+            <p class="label-mono">{{ lab.track_name }}</p>
+            <h2 class="heading-card" id="lab-modal-title-{{ lab.id }}">{{ lab.title }}</h2>
+            <p class="vision25-meta">{{ lab.tagline }}</p>
+            <p class="body-large" id="lab-modal-summary-{{ lab.id }}">{{ lab.description }}</p>
+            {% if lab.signals %}
+              <section class="vision25-stack">
+                <h3 class="heading-card">{{ 'Signals'|t }}</h3>
+                <ul>
+                  {% for signal in lab.signals %}
+                    <li class="body-base">{{ signal }}</li>
+                  {% endfor %}
+                </ul>
+              </section>
+            {% endif %}
+            {% if lab.related_sessions %}
+              <section class="vision25-stack">
+                <h3 class="heading-card">{{ 'Related Sessions'|t }}</h3>
+                <div class="vision25-stack">
+                  {% for session in lab.related_sessions %}
+                    <article class="glass-card">
+                      <div class="vision25-card__body">
+                        <p class="vision25-time">{{ session.start }}–{{ session.end }}</p>
+                        <p class="body-base"><strong>{{ session.title }}</strong></p>
+                      </div>
+                    </article>
+                  {% endfor %}
+                </div>
+              </section>
+            {% endif %}
+            <button class="vision25-modal__close" type="button" data-dialog-close aria-label="{{ 'Close dialog'|t }}">
+              {{ 'Close'|t }} <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

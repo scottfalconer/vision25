@@ -1,0 +1,54 @@
+uuid: 2e4815c1-e1ce-4804-9da5-c6fb47d12db8
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_breadcrumb_block
+    - canvas.component.sdc.mercury.heading
+    - canvas.component.sdc.mercury.section
+    - canvas.component.sdc.mercury.text
+    - core.entity_view_mode.node.full
+    - field.field.node.lab.field_description
+    - field.field.node.lab.field_tagline
+    - node.type.lab
+  module:
+    - link
+    - node
+    - options
+id: node.lab.full
+content_entity_type_id: node
+content_entity_type_bundle: lab
+content_entity_type_view_mode: full
+component_tree:
+  0:
+    uuid: 6ff31d79-f73c-4ebd-bf0c-d8f46b5f79fd
+    component_id: block.system_breadcrumb_block
+    component_version: ad6359c331fc7c45
+    inputs: '{"label":"Breadcrumbs","label_display":"0"}'
+  1:
+    uuid: 4db52853-bbdf-4a78-bbb3-a1960fa4c74c
+    component_id: sdc.mercury.section
+    component_version: a917d5c9be8f2830
+    inputs: '{"columns":"100","mobile_columns":"1","width":"75%","margin_block_start":"48","margin_block_end":"48","padding_block_start":"0","padding_block_end":"0","section_header":true,"section_footer":false}'
+  '1:header_slot:0':
+    parent_uuid: 4db52853-bbdf-4a78-bbb3-a1960fa4c74c
+    slot: header_slot
+    uuid: ef631b42-dfd5-4930-98b7-f80f9f84907b
+    component_id: sdc.mercury.heading
+    component_version: fee1c60088ebfe2f
+    inputs: '{"heading_text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:lab\u241dtitle\u241e\u241fvalue"},"level":1,"text_size":"default","text_color":"default","align":"left","url":""}'
+  '1:main_slot:0':
+    parent_uuid: 4db52853-bbdf-4a78-bbb3-a1960fa4c74c
+    slot: main_slot
+    uuid: d5e4131a-82ed-4778-b602-0fca81a0d7aa
+    component_id: sdc.mercury.text
+    component_version: 16c79c28a4108f9b
+    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:lab\u241dfield_tagline\u241e\u241fvalue"},"text_size":"text-lg","text_color":"default"}'
+  '1:main_slot:1':
+    parent_uuid: 4db52853-bbdf-4a78-bbb3-a1960fa4c74c
+    slot: main_slot
+    uuid: e26d8509-89bc-46d9-9cd9-9fda8635d833
+    component_id: sdc.mercury.text
+    component_version: 16c79c28a4108f9b
+    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:lab\u241dfield_description\u241e\u241fvalue"},"text_size":"normal","text_color":"default"}'
+exposed_slots: {  }

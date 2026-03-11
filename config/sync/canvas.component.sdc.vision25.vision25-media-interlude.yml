@@ -1,0 +1,43 @@
+uuid: b48e18d8-d4f6-448f-8d8d-0b0a1539537b
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - vision25
+active_version: 29095a6db79cb859
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        image_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /themes/custom/vision25/images/bluehour-beams-011.png
+              options: {  }
+          expression: ℹ︎link␟url
+        image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Decorative interlude image'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Media Interlude'
+id: sdc.vision25.vision25-media-interlude
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-media-interlude'

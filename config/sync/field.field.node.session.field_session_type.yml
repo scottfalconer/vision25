@@ -1,0 +1,21 @@
+uuid: 9d4bd5b9-247c-4d5a-9d60-baf39195e8b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_type
+    - node.type.session
+  module:
+    - options
+id: node.session.field_session_type
+field_name: field_session_type
+entity_type: node
+bundle: session
+label: 'Session Type'
+description: 'Choose the visible session type tag used in agenda and tracks cards.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

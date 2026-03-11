@@ -1,0 +1,85 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Content Model
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - content_model_title
+    - quote
+    - relationship_1_from
+    - relationship_1_label
+    - relationship_1_to
+    - relationship_2_from
+    - relationship_2_label
+    - relationship_2_to
+    - relationship_3_from
+    - relationship_3_label
+    - relationship_3_to
+  properties:
+    content_model_title:
+      type: string
+      title: Content model title
+      default: Content Model
+      examples:
+        - Content Model
+    quote:
+      type: string
+      title: Quote
+      default: A beautiful flat site is a dead end. A structured system scales for teams.
+      examples:
+        - A beautiful flat site is a dead end. A structured system scales for teams.
+    relationship_1_from:
+      type: string
+      title: Relationship one from
+      default: Labs
+      examples:
+        - Labs
+    relationship_1_label:
+      type: string
+      title: Relationship one label
+      default: referenced by
+      examples:
+        - referenced by
+    relationship_1_to:
+      type: string
+      title: Relationship one to
+      default: Sessions
+      examples:
+        - Sessions
+    relationship_2_from:
+      type: string
+      title: Relationship two from
+      default: Sessions
+      examples:
+        - Sessions
+    relationship_2_label:
+      type: string
+      title: Relationship two label
+      default: categorized by
+      examples:
+        - categorized by
+    relationship_2_to:
+      type: string
+      title: Relationship two to
+      default: Tracks
+      examples:
+        - Tracks
+    relationship_3_from:
+      type: string
+      title: Relationship three from
+      default: Milestones
+      examples:
+        - Milestones
+    relationship_3_label:
+      type: string
+      title: Relationship three label
+      default: tagged Past / Future
+      examples:
+        - tagged Past / Future
+    relationship_3_to:
+      type: string
+      title: Relationship three to
+      default: Era
+      examples:
+        - Era

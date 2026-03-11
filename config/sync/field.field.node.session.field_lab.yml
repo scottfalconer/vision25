@@ -1,0 +1,24 @@
+uuid: 8df4a4b1-8284-49f3-b849-bf0933fd6d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lab
+    - node.type.lab
+    - node.type.session
+id: node.session.field_lab
+field_name: field_lab
+entity_type: node
+bundle: session
+label: 'Related Lab'
+description: 'Select the related lab that this session points to.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      lab: lab
+field_type: entity_reference

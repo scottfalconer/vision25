@@ -1,0 +1,71 @@
+uuid: 08568ea7-af40-4b90-9200-7b9e39504777
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - vision25
+active_version: 48bff671227160fc
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Act I'
+          expression: ℹ︎string␟value
+        section_title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The Flywheel'
+          expression: ℹ︎string␟value
+        body_primary:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'For twenty-five years, Drupal has operated as a reinforcing system.'
+          expression: ℹ︎string␟value
+        body_secondary:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'This is not a crisis. It is a recalibration.'
+          expression: ℹ︎string␟value
+        background_variant:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: default
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Narrative Section'
+id: sdc.vision25.vision25-narrative-section
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-narrative-section'

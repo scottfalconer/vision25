@@ -1,0 +1,24 @@
+uuid: e625f65a-ea7a-45fd-a303-bb76fc11d08b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.session
+id: node.session.field_image
+field_name: field_image
+entity_type: node
+bundle: session
+label: Image
+description: 'Optional supporting session image used in internal references and future parity refinements.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

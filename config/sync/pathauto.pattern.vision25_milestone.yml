@@ -1,0 +1,22 @@
+uuid: 33192d30-690e-4b35-aeb7-37cf3a69ffaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vision25_milestone
+label: 'Vision 25 Milestones'
+type: 'canonical_entities:node'
+pattern: 'timeline/[node:title]'
+selection_criteria:
+  'bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: d82f7e03-eb23-4a9c-b52f-3e8ab0126cf1
+    context_mapping:
+      node: node
+    bundles:
+      milestone: milestone
+selection_logic: and
+weight: 0
+relationships: {  }

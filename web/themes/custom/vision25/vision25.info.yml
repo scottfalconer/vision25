@@ -1,0 +1,29 @@
+regions:
+  header: Header
+  content: Content
+name: Vision 25
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - vision25/base
+  - vision25/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - vision25/user
+  core/drupal.dropbutton:
+    - vision25/dropbutton
+  core/drupal.dialog:
+    - vision25/dialog
+  file/drupal.file:
+    - vision25/file
+  core/drupal.item-list:
+    - vision25/item-list
+  core/drupal.progress:
+    - vision25/progress
+  core/drupal.tablesort:
+    - vision25/drupal.tablesort
+description: 'Vision 25 Drupal CMS theme.'
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.3.5'

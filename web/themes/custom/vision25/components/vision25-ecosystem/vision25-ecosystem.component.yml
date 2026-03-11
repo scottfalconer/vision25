@@ -1,0 +1,30 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Ecosystem
+group: Vision 25
+status: stable
+props:
+  type: object
+  properties:
+    ecosystem_label:
+      type: string
+      title: Ecosystem label
+      default: The Ecosystem
+    ecosystem_title:
+      type: string
+      title: Ecosystem title
+      default: Three corners. One system.
+    ecosystem_subtitle:
+      type: string
+      title: Ecosystem subtitle
+      default: Product, agencies, and community — each strengthening the others.
+    tracks:
+      type: array
+      title: Tracks
+      items:
+        type: object
+        additionalProperties: true
+    tracks_url:
+      type: string
+      title: Tracks URL
+      format: uri-reference
+      default: /tracks

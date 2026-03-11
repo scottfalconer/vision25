@@ -1,0 +1,24 @@
+uuid: 5961a5b7-0d7f-4798-ad98-4ba63f0cccb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.milestone
+id: node.milestone.field_image
+field_name: field_image
+entity_type: node
+bundle: milestone
+label: Image
+description: 'Timeline image imported from the source site.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

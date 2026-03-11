@@ -1,0 +1,54 @@
+uuid: 40081647-44ea-45d9-8b36-71d8a089b2d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_breadcrumb_block
+    - canvas.component.sdc.mercury.heading
+    - canvas.component.sdc.mercury.section
+    - canvas.component.sdc.mercury.text
+    - core.entity_view_mode.node.full
+    - field.field.node.milestone.field_era
+    - field.field.node.milestone.field_year
+    - node.type.milestone
+  module:
+    - link
+    - node
+    - options
+id: node.milestone.full
+content_entity_type_id: node
+content_entity_type_bundle: milestone
+content_entity_type_view_mode: full
+component_tree:
+  0:
+    uuid: e8fa81b7-2e11-4c8c-b838-68c1e70f8830
+    component_id: block.system_breadcrumb_block
+    component_version: ad6359c331fc7c45
+    inputs: '{"label":"Breadcrumbs","label_display":"0"}'
+  1:
+    uuid: a9e19162-d9f0-42db-8f5b-7c97ca803672
+    component_id: sdc.mercury.section
+    component_version: a917d5c9be8f2830
+    inputs: '{"columns":"100","mobile_columns":"1","width":"75%","margin_block_start":"48","margin_block_end":"48","padding_block_start":"0","padding_block_end":"0","section_header":true,"section_footer":false}'
+  '1:header_slot:0':
+    parent_uuid: a9e19162-d9f0-42db-8f5b-7c97ca803672
+    slot: header_slot
+    uuid: 851a890d-df06-4147-bb5c-16f929296864
+    component_id: sdc.mercury.heading
+    component_version: fee1c60088ebfe2f
+    inputs: '{"heading_text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:milestone\u241dtitle\u241e\u241fvalue"},"level":1,"text_size":"default","text_color":"default","align":"left","url":""}'
+  '1:main_slot:0':
+    parent_uuid: a9e19162-d9f0-42db-8f5b-7c97ca803672
+    slot: main_slot
+    uuid: 4897f53f-436d-45e2-b7ec-fcb10e9a9185
+    component_id: sdc.mercury.text
+    component_version: 16c79c28a4108f9b
+    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:milestone\u241dfield_year\u241e\u241fvalue"},"text_size":"text-lg","text_color":"default"}'
+  '1:main_slot:1':
+    parent_uuid: a9e19162-d9f0-42db-8f5b-7c97ca803672
+    slot: main_slot
+    uuid: 08e2247c-ccfe-4d7e-a729-01f63f7ff98f
+    component_id: sdc.mercury.text
+    component_version: 16c79c28a4108f9b
+    inputs: '{"text":{"sourceType":"entity-field","expression":"\u2139\ufe0e\u241centity:node:milestone\u241dfield_era\u241e\u241fvalue"},"text_size":"normal","text_color":"default"}'
+exposed_slots: {  }

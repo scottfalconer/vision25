@@ -1,0 +1,21 @@
+uuid: ac8738a0-4b6c-437b-bd0c-d7c3ea04997d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start
+    - node.type.session
+  module:
+    - datetime
+id: node.session.field_start
+field_name: field_start
+entity_type: node
+bundle: session
+label: 'Start Time'
+description: 'Session start date and time. Only the time is displayed on the public site.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 8ca2ef4b-df10-4d68-a78c-afb61cd1dedf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.room.field_source_id
+    - taxonomy.vocabulary.room
+  module:
+    - text
+id: taxonomy_term.room.default
+targetEntityType: taxonomy_term
+bundle: room
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_source_id: true

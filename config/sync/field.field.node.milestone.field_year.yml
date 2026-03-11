@@ -1,0 +1,19 @@
+uuid: 8d954757-18ed-401e-9ceb-33fe3f65cd2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.milestone
+id: node.milestone.field_year
+field_name: field_year
+entity_type: node
+bundle: milestone
+label: Year
+description: 'Four-digit year label shown in the timeline rail.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

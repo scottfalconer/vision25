@@ -1,0 +1,58 @@
+{% set boxes = [
+  {'label': box_hero_label, 'style': 'top: 5%; left: 5%; width: 90%; height: 18%;'},
+  {'label': box_header_label, 'style': 'top: 26%; left: 10%; width: 80%; height: 8%;'},
+  {'label': box_triangle_label, 'style': 'top: 36%; left: 20%; width: 60%; height: 16%;'},
+  {'label': box_bento_label, 'style': 'top: 55%; left: 5%; width: 90%; height: 20%;'},
+  {'label': box_cta_label, 'style': 'top: 78%; left: 5%; width: 90%; height: 10%;'},
+  {'label': box_timeline_label, 'style': 'top: 90%; left: 10%; width: 80%; height: 8%;'},
+] %}
+
+<section{{ attributes.addClass('vision25-page-section', 'vision25-page-section--tight-top', 'safe-frame') }}>
+  <div class="section-container vision25-stack--wide">
+    <div class="vision25-toggle-group" data-toggle-group data-toggle-target="[data-toggle-item]">
+      <button class="vision25-toggle-button is-active" type="button" data-toggle-value="visitor" aria-selected="true">{{ visitor_button_label }}</button>
+      <button class="vision25-toggle-button" type="button" data-toggle-value="system" aria-selected="false">{{ system_button_label }}</button>
+    </div>
+
+    <section class="vision25-system-frame glass-card-elevated" data-scroll-reveal>
+      <div class="vision25-system-canvas" data-toggle-item="visitor">
+        <div class="vision25-system-grid">
+          <div class="vision25-system-placeholder vision25-system-placeholder--hero">
+            <h3 class="heading-section">{{ visitor_hero_label }}</h3>
+          </div>
+          <div class="vision25-system-placeholder vision25-system-placeholder--header">
+            <p class="heading-card">{{ visitor_header_label }}</p>
+          </div>
+          <div class="vision25-system-placeholder vision25-system-placeholder--triangle">
+            <p class="body-large">{{ visitor_triangle_label }}</p>
+          </div>
+          <div class="vision25-system-bento">
+            <div class="vision25-system-placeholder vision25-system-placeholder--bento">
+              <p>{{ visitor_bento_card_one_label }}</p>
+            </div>
+            <div class="vision25-system-placeholder vision25-system-placeholder--bento">
+              <p>{{ visitor_bento_card_two_label }}</p>
+            </div>
+            <div class="vision25-system-placeholder vision25-system-placeholder--bento">
+              <p>{{ visitor_bento_card_three_label }}</p>
+            </div>
+          </div>
+          <div class="vision25-system-placeholder vision25-system-placeholder--cta">
+            <p>{{ visitor_cta_label }}</p>
+          </div>
+          <div class="vision25-system-placeholder vision25-system-placeholder--timeline">
+            <p>{{ visitor_timeline_label }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="vision25-system-overlay is-hidden" data-toggle-item="system">
+        {% for box in boxes %}
+          <div class="vision25-system-overlay__box" style="{{ box.style }}">
+            <span class="vision25-system-overlay__label">{{ box.label }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</section>

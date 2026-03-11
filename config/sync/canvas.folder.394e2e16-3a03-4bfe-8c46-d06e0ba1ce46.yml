@@ -1,0 +1,21 @@
+uuid: 394e2e16-3a03-4bfe-8c46-d06e0ba1ce46
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vision 25 Site'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.vision25_agenda_schedule
+  - block.vision25_cta_band
+  - block.vision25_home_ecosystem
+  - block.vision25_home_hero
+  - block.vision25_labs_grid
+  - block.vision25_media_interlude
+  - block.vision25_register_form
+  - block.vision25_section_intro
+  - block.vision25_story_section
+  - block.vision25_system_content_model
+  - block.vision25_system_explorer
+  - block.vision25_timeline_explorer
+  - block.vision25_track_section

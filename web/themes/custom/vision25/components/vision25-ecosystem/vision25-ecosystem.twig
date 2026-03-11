@@ -1,0 +1,27 @@
+<section{{ attributes.addClass('safe-frame', 'gradient-luminous') }}>
+  <div class="section-container">
+    <header class="vision25-section-header vision25-section-header--centered" data-scroll-reveal>
+      <p class="label-mono">{{ ecosystem_label }}</p>
+      <h2 class="heading-section">{{ ecosystem_title }}</h2>
+      <p class="body-large">{{ ecosystem_subtitle }}</p>
+    </header>
+
+    <div class="vision25-triangle" data-scroll-reveal data-triangle-animate role="navigation" aria-label="Track navigation">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <line x1="50" y1="8" x2="12" y2="82" stroke="var(--silver-blue)" stroke-width="0.3" stroke-opacity="0.5"></line>
+        <line x1="12" y1="82" x2="88" y2="82" stroke="var(--silver-blue)" stroke-width="0.3" stroke-opacity="0.5"></line>
+        <line x1="88" y1="82" x2="50" y2="8" stroke="var(--silver-blue)" stroke-width="0.3" stroke-opacity="0.5"></line>
+        <circle cx="50" cy="8" r="2" fill="var(--silver-blue)"></circle>
+        <circle cx="12" cy="82" r="2" fill="var(--silver-blue)"></circle>
+        <circle cx="88" cy="82" r="2" fill="var(--silver-blue)"></circle>
+      </svg>
+      {% for track in tracks %}
+        {% set positions = ['vision25-triangle__label--top', 'vision25-triangle__label--left', 'vision25-triangle__label--right'] %}
+        <a class="vision25-triangle__label {{ positions[loop.index0] }}" href="{{ tracks_url }}#{{ track.id }}">
+          <span class="label-mono">Track {{ '%02d'|format(loop.index) }}</span>
+          <span>{{ track.name }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

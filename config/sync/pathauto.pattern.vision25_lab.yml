@@ -1,0 +1,22 @@
+uuid: e1ac25c8-8445-44d4-9091-c7a111c85f15
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vision25_lab
+label: 'Vision 25 Labs'
+type: 'canonical_entities:node'
+pattern: 'labs/[node:title]'
+selection_criteria:
+  'bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f1960f84-26e3-4e1c-bebf-38e6b18b0526
+    context_mapping:
+      node: node
+    bundles:
+      lab: lab
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,24 @@
+uuid: 0ceff56d-d8e8-4a2b-90f8-4b2bed0dd3a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - vision25_site
+active_version: d1ef101e53024c20
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: vision25_timeline_explorer
+        label: 'Vision 25 Timeline Explorer'
+        label_display: '0'
+        provider: vision25_site
+        past_label: 'Past 25'
+        future_label: 'Next 25'
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 Timeline Explorer'
+id: block.vision25_timeline_explorer
+provider: vision25_site
+source: block
+source_local_id: vision25_timeline_explorer

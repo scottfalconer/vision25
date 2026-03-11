@@ -1,0 +1,20 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Track Section
+group: Vision 25
+status: stable
+props:
+  type: object
+  properties:
+    track:
+      type: object
+      title: Track
+      additionalProperties: true
+    track_number:
+      type: number
+      title: Track number
+      default: 1
+    labs_url:
+      type: string
+      title: Labs URL
+      format: uri-reference
+      default: /labs

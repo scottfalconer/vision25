@@ -1,0 +1,9 @@
+uuid: 59fe91cd-3816-4813-a860-0dfe667571b9
+langcode: en
+status: true
+dependencies: {  }
+name: Rooms
+vid: room
+description: 'Controlled room taxonomy for the Vision 25 agenda.'
+weight: 0
+new_revision: false

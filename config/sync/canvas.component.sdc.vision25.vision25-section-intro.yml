@@ -1,0 +1,61 @@
+uuid: 321fc2c7-9360-4707-980a-2aa490c9696d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - vision25
+active_version: 2446b5e44f9b213c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        page_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Section
+          expression: ℹ︎string␟value
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Agenda
+          expression: ℹ︎string␟value
+        subtitle:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A single day. Three tracks. One shared ambition.'
+          expression: ℹ︎string␟value
+        layout:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: stack
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Section Intro'
+id: sdc.vision25.vision25-section-intro
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-section-intro'

@@ -1,0 +1,23 @@
+uuid: 73518276-e9f8-449a-9ad6-f913591388ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - vision25_site
+active_version: 1dad132314fb0d14
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: vision25_track_section
+        label: 'Vision 25 Track Section'
+        label_display: '0'
+        provider: vision25_site
+        track_id: product
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 Track Section'
+id: block.vision25_track_section
+provider: vision25_site
+source: block
+source_local_id: vision25_track_section

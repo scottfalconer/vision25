@@ -1,0 +1,29 @@
+uuid: a106cab0-01bd-4051-b908-f890ad2c2cf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.track.field_accent_hint
+    - field.field.taxonomy_term.track.field_image
+    - field.field.taxonomy_term.track.field_source_id
+    - field.field.taxonomy_term.track.field_summary
+    - taxonomy.vocabulary.track
+  module:
+    - text
+id: taxonomy_term.track.default
+targetEntityType: taxonomy_term
+bundle: track
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_accent_hint: true
+  field_image: true
+  field_source_id: true
+  field_summary: true

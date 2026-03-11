@@ -1,0 +1,7 @@
+vision25_site.not_found:
+  path: '/not-found'
+  defaults:
+    _controller: '\Drupal\vision25_site\Controller\Vision25SiteController::notFound'
+    _title: 'Page not found'
+  requirements:
+    _access: 'TRUE'

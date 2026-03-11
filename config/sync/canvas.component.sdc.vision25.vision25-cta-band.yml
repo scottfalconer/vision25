@@ -1,0 +1,63 @@
+uuid: 9bcaf3ae-8b67-4bb5-9f1d-340865530f44
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - vision25
+active_version: 493255f2ba5541a5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Step it up.'
+          expression: ℹ︎string␟value
+        subtitle:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The baseline of ambition shifted. Join us.'
+          expression: ℹ︎string␟value
+        cta_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Register Now'
+          expression: ℹ︎string␟value
+        cta_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /register
+              options: {  }
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 CTA Band'
+id: sdc.vision25.vision25-cta-band
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-cta-band'

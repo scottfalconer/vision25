@@ -1,0 +1,30 @@
+{% set relationships = [
+  {'from': relationship_1_from, 'label': relationship_1_label, 'to': relationship_1_to},
+  {'from': relationship_2_from, 'label': relationship_2_label, 'to': relationship_2_to},
+  {'from': relationship_3_from, 'label': relationship_3_label, 'to': relationship_3_to},
+] %}
+
+<section{{ attributes.addClass('vision25-page-section', 'vision25-page-section--tight-top', 'safe-frame') }}>
+  <div class="section-container vision25-stack--wide">
+    <section class="vision25-system-content-model">
+      <div class="vision25-stack">
+        <h2 class="heading-card">{{ content_model_title }}</h2>
+        <div class="vision25-system-content-model__desktop-panel" aria-hidden="true"></div>
+        <div class="glass-card-elevated vision25-system-content-model__details">
+          <div class="vision25-system-relationships">
+            {% for relationship in relationships %}
+              <div class="vision25-system-relationship">
+                <span class="vision25-chip">{{ relationship.from }}</span>
+                <span class="vision25-system-relationship__label">→ {{ relationship.label }} →</span>
+                <span class="vision25-chip">{{ relationship.to }}</span>
+              </div>
+            {% endfor %}
+          </div>
+          <blockquote class="vision25-system-quote">
+            <p class="body-large"><strong>"{{ quote }}"</strong></p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

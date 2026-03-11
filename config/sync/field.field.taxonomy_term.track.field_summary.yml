@@ -1,0 +1,19 @@
+uuid: 98d340c3-80f9-4b2f-97e4-4b5927950da7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_summary
+    - taxonomy.vocabulary.track
+id: taxonomy_term.track.field_summary
+field_name: field_summary
+entity_type: taxonomy_term
+bundle: track
+label: Summary
+description: 'One-sentence track summary used in track navigation and track hero sections.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

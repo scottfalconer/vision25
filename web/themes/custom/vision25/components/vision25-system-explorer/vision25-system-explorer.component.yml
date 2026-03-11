@@ -1,0 +1,120 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 System Explorer
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - visitor_button_label
+    - system_button_label
+    - visitor_hero_label
+    - visitor_header_label
+    - visitor_triangle_label
+    - visitor_bento_card_one_label
+    - visitor_bento_card_two_label
+    - visitor_bento_card_three_label
+    - visitor_cta_label
+    - visitor_timeline_label
+    - box_hero_label
+    - box_header_label
+    - box_triangle_label
+    - box_bento_label
+    - box_cta_label
+    - box_timeline_label
+  properties:
+    visitor_button_label:
+      type: string
+      title: Visitor button label
+      default: Visitor View
+      examples:
+        - Visitor View
+    system_button_label:
+      type: string
+      title: System button label
+      default: System View
+      examples:
+        - System View
+    visitor_hero_label:
+      type: string
+      title: Visitor hero label
+      default: Hero_Cinematic
+      examples:
+        - Hero_Cinematic
+    visitor_header_label:
+      type: string
+      title: Visitor header label
+      default: Section_Header
+      examples:
+        - Section_Header
+    visitor_triangle_label:
+      type: string
+      title: Visitor triangle label
+      default: Triangle_Track_Nav
+      examples:
+        - Triangle_Track_Nav
+    visitor_bento_card_one_label:
+      type: string
+      title: Visitor bento card one label
+      default: Session_Card
+      examples:
+        - Session_Card
+    visitor_bento_card_two_label:
+      type: string
+      title: Visitor bento card two label
+      default: Lab_Card
+      examples:
+        - Lab_Card
+    visitor_bento_card_three_label:
+      type: string
+      title: Visitor bento card three label
+      default: Session_Card
+      examples:
+        - Session_Card
+    visitor_cta_label:
+      type: string
+      title: Visitor CTA label
+      default: CTA_Band
+      examples:
+        - CTA_Band
+    visitor_timeline_label:
+      type: string
+      title: Visitor timeline label
+      default: Timeline_Rail
+      examples:
+        - Timeline_Rail
+    box_hero_label:
+      type: string
+      title: System hero label
+      default: Hero_Cinematic
+      examples:
+        - Hero_Cinematic
+    box_header_label:
+      type: string
+      title: System header label
+      default: Section_Header
+      examples:
+        - Section_Header
+    box_triangle_label:
+      type: string
+      title: System triangle label
+      default: Triangle_Track_Nav
+      examples:
+        - Triangle_Track_Nav
+    box_bento_label:
+      type: string
+      title: System bento label
+      default: Bento_Agenda_View
+      examples:
+        - Bento_Agenda_View
+    box_cta_label:
+      type: string
+      title: System CTA label
+      default: CTA_Band
+      examples:
+        - CTA_Band
+    box_timeline_label:
+      type: string
+      title: System timeline label
+      default: Timeline_Rail
+      examples:
+        - Timeline_Rail

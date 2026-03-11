@@ -1,0 +1,57 @@
+{% if track %}
+  <section{{ attributes.addClass('safe-frame') }} id="{{ track.id }}">
+    <div class="vision25-track-hero">
+      <div class="vision25-track-hero__image">
+        <img src="{{ track.image }}" alt="{{ track.name }}">
+        <div class="vision25-track-hero__overlay"></div>
+      </div>
+      <div class="vision25-track-hero__content">
+        <div class="section-container vision25-stack">
+          <p class="label-mono">Track {{ '%02d'|format(track_number|default(1)) }}</p>
+          <h2 class="heading-section">{{ track.name }}</h2>
+          <p class="body-large">{{ track.summary }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-container vision25-stack--wide">
+      <section data-scroll-reveal>
+        <h3 class="heading-card">Sessions</h3>
+        <div class="vision25-card-grid">
+          {% for session in track.sessions %}
+            <article class="vision25-card glass-card-elevated">
+              <span class="vision25-card__row">
+                <span class="vision25-time">{{ session.start }}–{{ session.end }}</span>
+                <span class="pill-tag">{{ session.type }}</span>
+              </span>
+              <h4 class="heading-card">{{ session.title }}</h4>
+              <p class="body-base">{{ session.summary }}</p>
+              <span class="vision25-meta">{{ session.room_name }}</span>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      {% if track.labs %}
+        <section data-scroll-reveal>
+          <h3 class="heading-card">Related Labs</h3>
+          <div class="vision25-card-grid">
+            {% for lab in track.labs %}
+              <a class="vision25-card vision25-card--media glass-card-elevated" href="{{ labs_url }}#{{ lab.id }}">
+                <div class="vision25-card__media">
+                  <img src="{{ lab.image }}" alt="{{ lab.title }}">
+                </div>
+                <div class="vision25-card__body">
+                  <p class="label-mono">{{ lab.track_name }}</p>
+                  <h4 class="heading-card">{{ lab.title }}</h4>
+                  <p class="vision25-meta">{{ lab.tagline }}</p>
+                  <p class="body-base">{{ lab.description }}</p>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    </div>
+  </section>
+{% endif %}

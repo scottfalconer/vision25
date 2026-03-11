@@ -1,0 +1,39 @@
+uuid: 169714e1-7fc9-46b7-ae17-5b5cb3fc08c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_session_type
+field_name: field_session_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Keynote
+      label: Keynote
+    -
+      value: Talk
+      label: Talk
+    -
+      value: Workshop
+      label: Workshop
+    -
+      value: Interlude
+      label: Interlude
+    -
+      value: Panel
+      label: Panel
+    -
+      value: Demo
+      label: Demo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

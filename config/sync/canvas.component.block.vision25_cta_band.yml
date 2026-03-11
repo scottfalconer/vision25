@@ -1,0 +1,26 @@
+uuid: 31e12177-a187-4a66-adc7-fc8ab4495ed2
+langcode: en
+status: true
+dependencies:
+  module:
+    - vision25_site
+active_version: fedee7e5c9a30f79
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: vision25_cta_band
+        label: 'Vision 25 CTA Band'
+        label_display: '0'
+        provider: vision25_site
+        title: 'Step it up.'
+        subtitle: 'The baseline of ambition shifted. Join us.'
+        cta_label: 'Register Now'
+        cta_url: /register
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 CTA Band'
+id: block.vision25_cta_band
+provider: vision25_site
+source: block
+source_local_id: vision25_cta_band

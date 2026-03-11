@@ -1,0 +1,23 @@
+uuid: aa1a92cf-85ce-4651-88a9-bc6e148d7119
+langcode: en
+status: true
+dependencies:
+  module:
+    - vision25_site
+active_version: 6136a711131d6c63
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: vision25_register_form
+        label: 'Vision 25 Register Form'
+        label_display: '0'
+        provider: vision25_site
+        note: 'Your information is handled with care. This is a concept demo — no data is stored or transmitted.'
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 Register Form'
+id: block.vision25_register_form
+provider: vision25_site
+source: block
+source_local_id: vision25_register_form

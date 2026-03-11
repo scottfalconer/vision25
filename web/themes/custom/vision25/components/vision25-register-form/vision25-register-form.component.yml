@@ -1,0 +1,15 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Register Form
+group: Vision 25
+status: stable
+props:
+  type: object
+  properties:
+    note:
+      type: string
+      title: Register note
+      default: Your information is handled with care. This is a concept demo — no data is stored or transmitted.
+    form:
+      type: object
+      title: Form
+      additionalProperties: true

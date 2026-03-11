@@ -1,0 +1,49 @@
+uuid: 3e751811-76db-46dd-a9b8-abf0f4025b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.milestone.field_era
+    - field.field.node.milestone.field_image
+    - field.field.node.milestone.field_source_id
+    - field.field.node.milestone.field_year
+    - node.type.milestone
+  module:
+    - media
+    - options
+    - user
+id: node.milestone.default
+targetEntityType: node
+bundle: milestone
+mode: default
+content:
+  field_era:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_year:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_source_id: true

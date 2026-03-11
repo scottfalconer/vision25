@@ -1,0 +1,22 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Media Interlude
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - image_url
+  properties:
+    image_url:
+      type: string
+      title: Image URL
+      format: uri-reference
+      default: /themes/custom/vision25/images/bluehour-beams-011.png
+      examples:
+        - /themes/custom/vision25/images/bluehour-beams-011.png
+    image_alt:
+      type: string
+      title: Image alt text
+      default: ""
+      examples:
+        - Decorative interlude image

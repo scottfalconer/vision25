@@ -1,0 +1,19 @@
+{% set layout = layout|default('stack') %}
+{% set container_class = 'section-container vision25-stack--wide' %}
+{% set header_class = 'vision25-section-header' %}
+{% if layout == 'stack_center' %}
+  {% set header_class = header_class ~ ' vision25-section-header--centered' %}
+{% elseif layout == 'register' %}
+  {% set container_class = 'section-container vision25-register' %}
+  {% set header_class = header_class ~ ' vision25-section-header--centered' %}
+{% endif %}
+
+<section{{ attributes.addClass('safe-frame', 'vision25-page-section', 'vision25-page-section--tight-bottom') }}>
+  <div class="{{ container_class }}">
+    <header class="{{ header_class }}" data-scroll-reveal>
+      <p class="label-mono">{{ page_label }}</p>
+      <h1 class="heading-section">{{ title }}</h1>
+      <p class="body-large">{{ subtitle }}</p>
+    </header>
+  </div>
+</section>

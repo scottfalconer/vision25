@@ -1,0 +1,19 @@
+uuid: 91ccf7b1-7a2e-4080-b5d2-258307651022
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_accent_hint
+    - taxonomy.vocabulary.track
+id: taxonomy_term.track.field_accent_hint
+field_name: field_accent_hint
+entity_type: taxonomy_term
+bundle: track
+label: 'Accent Hint'
+description: 'Short machine-readable accent label from the source design.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

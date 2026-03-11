@@ -1,0 +1,14 @@
+<section{{ attributes.addClass('vision25-hero') }}>
+  <div class="vision25-hero__media">
+    <img src="{{ image_url }}" alt="{{ image_alt|default(hero_title) }}">
+    <div class="vision25-hero__overlay"></div>
+  </div>
+  <div class="section-container vision25-page__section vision25-page__section--centered" data-hero-intro>
+    <div class="vision25-section-header vision25-section-header--centered">
+      <p class="label-mono vision25-hero__eyebrow" data-hero-piece="eyebrow">{{ hero_eyebrow }}</p>
+      <h1 class="heading-display vision25-hero__title" data-hero-piece="title">{{ hero_title }}</h1>
+      <p class="body-large vision25-hero__subtitle" data-hero-piece="subtitle">{{ hero_subtitle }}</p>
+    </div>
+    <p class="vision25-hero__cta" data-hero-piece="cta"><a class="button button--primary" href="{{ hero_cta_url }}">{{ hero_cta_label }}</a></p>
+  </div>
+</section>

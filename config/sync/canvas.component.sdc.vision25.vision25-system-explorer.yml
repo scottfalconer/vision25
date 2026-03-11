@@ -1,0 +1,178 @@
+uuid: 9cfe5be0-68b6-4c52-bd5a-4f8a7fe3a1a4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vision25
+active_version: 0e4ed2cef54aec7e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        visitor_button_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Visitor View'
+          expression: ℹ︎string␟value
+        system_button_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'System View'
+          expression: ℹ︎string␟value
+        visitor_hero_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Hero_Cinematic
+          expression: ℹ︎string␟value
+        visitor_header_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Section_Header
+          expression: ℹ︎string␟value
+        visitor_triangle_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Triangle_Track_Nav
+          expression: ℹ︎string␟value
+        visitor_bento_card_one_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Session_Card
+          expression: ℹ︎string␟value
+        visitor_bento_card_two_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Lab_Card
+          expression: ℹ︎string␟value
+        visitor_bento_card_three_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Session_Card
+          expression: ℹ︎string␟value
+        visitor_cta_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: CTA_Band
+          expression: ℹ︎string␟value
+        visitor_timeline_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Timeline_Rail
+          expression: ℹ︎string␟value
+        box_hero_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Hero_Cinematic
+          expression: ℹ︎string␟value
+        box_header_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Section_Header
+          expression: ℹ︎string␟value
+        box_triangle_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Triangle_Track_Nav
+          expression: ℹ︎string␟value
+        box_bento_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Bento_Agenda_View
+          expression: ℹ︎string␟value
+        box_cta_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: CTA_Band
+          expression: ℹ︎string␟value
+        box_timeline_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Timeline_Rail
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 System Explorer'
+id: sdc.vision25.vision25-system-explorer
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-system-explorer'

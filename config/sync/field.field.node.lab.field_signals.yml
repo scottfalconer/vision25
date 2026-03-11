@@ -1,0 +1,19 @@
+uuid: ba1bd362-3581-4b5d-8976-6980243e3538
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_signals
+    - node.type.lab
+id: node.lab.field_signals
+field_name: field_signals
+entity_type: node
+bundle: lab
+label: Signals
+description: 'Repeatable signal bullets shown inside the lab detail dialog.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

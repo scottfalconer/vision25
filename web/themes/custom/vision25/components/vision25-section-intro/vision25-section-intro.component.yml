@@ -1,0 +1,40 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Section Intro
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - page_label
+    - title
+    - subtitle
+    - layout
+  properties:
+    page_label:
+      type: string
+      title: Section label
+      default: Section
+      examples:
+        - Section
+    title:
+      type: string
+      title: Section title
+      default: Title
+      examples:
+        - Agenda
+    subtitle:
+      type: string
+      title: Section subtitle
+      default: ""
+      examples:
+        - A single day. Three tracks. One shared ambition.
+    layout:
+      type: string
+      title: Layout
+      default: stack
+      examples:
+        - stack
+      enum:
+        - stack
+        - stack_center
+        - register

@@ -1,0 +1,13 @@
+{% set section_classes = ['safe-frame'] %}
+{% if background_variant|default('default') == 'luminous' %}
+  {% set section_classes = section_classes|merge(['gradient-luminous']) %}
+{% endif %}
+
+<section{{ attributes.addClass(section_classes) }}>
+  <div class="section-container vision25-stack" data-scroll-reveal>
+    <p class="label-mono">{{ section_label }}</p>
+    <h2 class="heading-section">{{ section_title }}</h2>
+    <p class="body-large">{{ body_primary }}</p>
+    <p class="body-large">{{ body_secondary }}</p>
+  </div>
+</section>

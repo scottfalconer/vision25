@@ -1,0 +1,19 @@
+uuid: 3dc34240-4725-48f7-826f-a68bb4f538d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_id
+    - node.type.milestone
+id: node.milestone.field_source_id
+field_name: field_source_id
+entity_type: node
+bundle: milestone
+label: 'Source ID'
+description: 'Stable migration identifier used by the seed script. Hidden from normal editorial work.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

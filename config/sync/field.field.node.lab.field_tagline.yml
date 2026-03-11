@@ -1,0 +1,19 @@
+uuid: 0f2cddb3-f7bb-4ee5-bc46-ee5b3d2427cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagline
+    - node.type.lab
+id: node.lab.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: lab
+label: Tagline
+description: 'Short mono-style subtitle shown beneath the lab title.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

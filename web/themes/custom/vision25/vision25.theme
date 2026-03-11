@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Core\Menu\MenuTreeParameters;
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function vision25_preprocess_image_widget(array &$variables): void {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function vision25_preprocess_page(array &$variables): void {
+  $variables['vision25_main_menu_items'] = vision25_build_main_menu_items('main');
+  $variables['vision25_site_name'] = \Drupal::config('system.site')->get('name') ?: 'VISION 25';
+  $current_path = \Drupal::service('path_alias.manager')->getAliasByPath(\Drupal::service('path.current')->getPath());
+  $variables['vision25_main_classes'] = ['vision25-main'];
+  if (in_array($current_path, ['/agenda', '/labs', '/timeline', '/register', '/system'], TRUE)) {
+    $variables['vision25_main_classes'][] = 'vision25-main--luminous';
+  }
+}
+
+/**
+ * Builds the main navigation items for the site shell.
+ *
+ * @param string $menu_name
+ *   The Drupal menu machine name.
+ *
+ * @return array<int, array<string, mixed>>
+ *   A normalized menu item list.
+ */
+function vision25_build_main_menu_items(string $menu_name): array {
+  $menu_tree = \Drupal::menuTree();
+  $parameters = (new MenuTreeParameters())
+    ->onlyEnabledLinks()
+    ->setMaxDepth(1);
+  $tree = $menu_tree->load($menu_name, $parameters);
+  $tree = $menu_tree->transform($tree, [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+  ]);
+
+  $current_path = \Drupal::service('path_alias.manager')->getAliasByPath(\Drupal::service('path.current')->getPath());
+  $items = [];
+
+  foreach ($tree as $element) {
+    $url = $element->link->getUrlObject();
+    $path = $url->toString();
+    $items[] = [
+      'title' => $element->link->getTitle(),
+      'url' => $path,
+      'is_active' => $path === $current_path || ($current_path === '/' && $path === '/'),
+    ];
+  }
+
+  return $items;
+}

@@ -1,0 +1,58 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Hero
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - hero_eyebrow
+    - hero_title
+    - hero_subtitle
+    - hero_cta_label
+    - hero_cta_url
+    - image_url
+  properties:
+    hero_eyebrow:
+      type: string
+      title: Hero eyebrow
+      default: "Drupal 2051 — The Enterprise Innovation Summit"
+      examples:
+        - "Drupal 2051 — The Enterprise Innovation Summit"
+    hero_title:
+      type: string
+      title: Hero title
+      default: VISION 25
+      examples:
+        - VISION 25
+    hero_subtitle:
+      type: string
+      title: Hero subtitle
+      default: The baseline of ambition shifted. We step it up.
+      examples:
+        - The baseline of ambition shifted. We step it up.
+    hero_cta_label:
+      type: string
+      title: Hero CTA label
+      default: Register Now
+      examples:
+        - Register Now
+    hero_cta_url:
+      type: string
+      title: Hero CTA URL
+      format: uri-reference
+      default: /register
+      examples:
+        - /register
+    image_url:
+      type: string
+      title: Hero image URL
+      format: uri-reference
+      default: /themes/custom/vision25/images/bluehour-beams-001.png
+      examples:
+        - /themes/custom/vision25/images/bluehour-beams-001.png
+    image_alt:
+      type: string
+      title: Hero image alt text
+      default: VISION 25
+      examples:
+        - VISION 25

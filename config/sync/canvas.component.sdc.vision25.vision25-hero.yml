@@ -1,0 +1,96 @@
+uuid: 722b48ed-50de-471d-a9c0-4e38c340601f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - vision25
+active_version: 317aa1afb03e3cab
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        hero_eyebrow:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Drupal 2051 — The Enterprise Innovation Summit'
+          expression: ℹ︎string␟value
+        hero_title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'VISION 25'
+          expression: ℹ︎string␟value
+        hero_subtitle:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The baseline of ambition shifted. We step it up.'
+          expression: ℹ︎string␟value
+        hero_cta_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Register Now'
+          expression: ℹ︎string␟value
+        hero_cta_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /register
+              options: {  }
+          expression: ℹ︎link␟url
+        image_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /themes/custom/vision25/images/bluehour-beams-001.png
+              options: {  }
+          expression: ℹ︎link␟url
+        image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'VISION 25'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Hero'
+id: sdc.vision25.vision25-hero
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-hero'

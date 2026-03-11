@@ -1,0 +1,21 @@
+uuid: b1afa73b-8872-487a-93ac-19e31ee6919d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_era
+    - node.type.milestone
+  module:
+    - options
+id: node.milestone.field_era
+field_name: field_era
+entity_type: node
+bundle: milestone
+label: Era
+description: 'Choose whether the milestone belongs to the past 25 or next 25 timeline.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

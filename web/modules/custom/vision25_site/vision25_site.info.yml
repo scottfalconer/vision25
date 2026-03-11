@@ -1,0 +1,14 @@
+name: Vision 25 Site
+type: module
+description: 'Vision 25 Canvas block components, content hooks, and site helpers.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - canvas:canvas
+  - media:media
+  - node:node
+  - options:options
+  - pathauto:pathauto
+  - taxonomy:taxonomy
+  - views:views
+  - webform:webform

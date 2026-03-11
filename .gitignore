@@ -1,0 +1,31 @@
+# Dependencies managed by Composer.
+/recipes
+/vendor
+/web/core
+/web/libraries
+/web/modules/contrib
+/web/profiles/contrib
+/web/themes/contrib
+/web/sites/default/files/
+
+# Local secrets and Acquia/DDEV runtime state.
+/.deploy_id_rsa
+/.deploy_id_rsa.pub
+/.acquia-ssh/
+/.ddev/db_snapshots/
+/.env
+/.env.*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

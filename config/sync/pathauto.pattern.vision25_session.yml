@@ -1,0 +1,22 @@
+uuid: 0e19ba13-b8ca-4c70-82f6-f327a6ce2941
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vision25_session
+label: 'Vision 25 Sessions'
+type: 'canonical_entities:node'
+pattern: 'sessions/[node:title]'
+selection_criteria:
+  'bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 46f3ef37-b8fd-413b-a783-d60836d3e15f
+    context_mapping:
+      node: node
+    bundles:
+      session: session
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,27 @@
+uuid: 43902c92-f2b5-438e-9ab8-2ae6f63e248e
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: 30nD-PfLJzOQ9q4Zls4kVESZf25cg-IhPNE_CSi9Bgo
+id: x
+label: X
+description: 'X (formerly known as Twitter) is a social media platform by X Corp. (USA).'
+default: false
+required: false
+opt_out: false
+only_once: false
+contextual_consent_only: null
+contextual_consent_text: null
+info_url: 'https://x.com/'
+privacy_policy_url: 'https://x.com/en/privacy'
+purposes:
+  - external_content
+cookies: {  }
+callback_code: ''
+javascripts:
+  - platform.twitter.com/widgets.js
+wrapper_identifier:
+  - .twitter-tweet
+attachments: {  }
+weight: 0

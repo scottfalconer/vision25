@@ -1,0 +1,19 @@
+uuid: 9fb330fc-a9e5-4a3c-aac2-f0b19f12d901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_source_id
+    - taxonomy.vocabulary.track
+id: taxonomy_term.track.field_source_id
+field_name: field_source_id
+entity_type: taxonomy_term
+bundle: track
+label: 'Source ID'
+description: 'Stable migration identifier used by the seed script. Hidden from normal editorial work.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

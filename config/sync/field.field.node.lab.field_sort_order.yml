@@ -1,0 +1,23 @@
+uuid: ada90012-8696-44b2-bef8-fe3d6e8093ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.lab
+id: node.lab.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: lab
+label: 'Sort Order'
+description: 'Numeric display order for lab cards. Lower numbers appear first across Labs and Tracks listings.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
