@@ -1,36 +1,3 @@
-block.settings.vision25_home_ecosystem:
-  type: block_settings
-  label: 'Vision 25 home ecosystem block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    ecosystem_label:
-      type: string
-    ecosystem_title:
-      type: string
-    ecosystem_subtitle:
-      type: string
-
-block.settings.vision25_track_section:
-  type: block_settings
-  label: 'Vision 25 track section block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    track_id:
-      type: string
-
-block.settings.vision25_timeline_explorer:
-  type: block_settings
-  label: 'Vision 25 timeline explorer block'
-  constraints:
-    FullyValidatable: ~
-  mapping:
-    past_label:
-      type: string
-    future_label:
-      type: string
-
 block.settings.vision25_register_form:
   type: block_settings
   label: 'Vision 25 register form block'

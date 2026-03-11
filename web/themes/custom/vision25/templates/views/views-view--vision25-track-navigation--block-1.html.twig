@@ -1,0 +1,27 @@
+{% if view.result %}
+  {% set positions = ['vision25-triangle__label--top', 'vision25-triangle__label--left', 'vision25-triangle__label--right'] %}
+  <section class="safe-frame gradient-luminous vision25-ecosystem-nav">
+    <div class="section-container">
+      <div class="vision25-triangle" data-scroll-reveal data-triangle-animate role="navigation" aria-label="{{ 'Track navigation'|t }}">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <line x1="50" y1="8" x2="12" y2="82" stroke="var(--silver-blue)" stroke-width="0.3" stroke-opacity="0.5"></line>
+          <line x1="12" y1="82" x2="88" y2="82" stroke="var(--silver-blue)" stroke-width="0.3" stroke-opacity="0.5"></line>
+          <line x1="88" y1="82" x2="50" y2="8" stroke="var(--silver-blue)" stroke-width="0.3" stroke-opacity="0.5"></line>
+          <circle cx="50" cy="8" r="2" fill="var(--silver-blue)"></circle>
+          <circle cx="12" cy="82" r="2" fill="var(--silver-blue)"></circle>
+          <circle cx="88" cy="82" r="2" fill="var(--silver-blue)"></circle>
+        </svg>
+        {% for result_row in view.result %}
+          {% set track = result_row._entity %}
+          {% set track_id = track.field_source_id.value ?: track.id %}
+          <a class="vision25-triangle__label {{ positions[loop.index0] }}" href="/tracks#{{ track_id }}">
+            <span class="label-mono">Track {{ '%02d'|format(loop.index) }}</span>
+            <span>{{ track.label }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% elseif empty %}
+  {{ empty }}
+{% endif %}

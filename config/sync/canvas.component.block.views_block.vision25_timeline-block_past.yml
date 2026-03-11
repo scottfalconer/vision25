@@ -1,0 +1,26 @@
+uuid: 1b5c13a5-6058-475a-b9b7-98de54613f4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vision25_timeline
+  module:
+    - views
+active_version: 7cb85537ff209857
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:vision25_timeline-block_past'
+        label: 'Vision 25 past timeline'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 past timeline'
+id: block.views_block.vision25_timeline-block_past
+provider: views
+source: block
+source_local_id: 'views_block:vision25_timeline-block_past'

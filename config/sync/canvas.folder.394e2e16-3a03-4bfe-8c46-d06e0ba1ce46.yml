@@ -6,9 +6,4 @@ name: 'Vision 25 Site'
 configEntityTypeId: component
 weight: 0
 items:
-  - block.vision25_agenda_schedule
-  - block.vision25_home_ecosystem
-  - block.vision25_labs_grid
   - block.vision25_register_form
-  - block.vision25_timeline_explorer
-  - block.vision25_track_section

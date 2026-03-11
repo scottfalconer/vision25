@@ -1,7 +1,1 @@
-services:
-  vision25_site.repository:
-    class: Drupal\vision25_site\Vision25Repository
-    arguments:
-      - '@entity_type.manager'
-      - '@file_url_generator'
-      - '@extension.path.resolver'
+services: {  }

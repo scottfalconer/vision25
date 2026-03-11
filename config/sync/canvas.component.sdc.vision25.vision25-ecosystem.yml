@@ -1,0 +1,42 @@
+uuid: 946b4442-a564-4fd9-bbd6-e47b1fc0e739
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vision25
+active_version: 1b53f429b6cab933
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        ecosystem_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        ecosystem_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        ecosystem_subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Ecosystem'
+id: sdc.vision25.vision25-ecosystem
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-ecosystem'

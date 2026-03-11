@@ -1,0 +1,10 @@
+{% if rows %}
+  <div class="section-container vision25-stack--wide">
+    <div class="vision25-filter-group" data-filter-group data-filter-target="[data-session-item]">
+      <button class="vision25-filter-button is-active" type="button" data-filter-value="all">{{ 'All Tracks'|t }}</button>
+      {{ rows }}
+    </div>
+  </div>
+{% elseif empty %}
+  {{ empty }}
+{% endif %}

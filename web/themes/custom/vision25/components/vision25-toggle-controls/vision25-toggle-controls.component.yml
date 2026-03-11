@@ -1,0 +1,43 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Vision 25 Toggle Controls
+group: Vision 25
+status: stable
+props:
+  type: object
+  required:
+    - first_label
+    - first_value
+    - second_label
+    - second_value
+    - target_selector
+  properties:
+    first_label:
+      type: string
+      title: First label
+      default: "Past 25"
+      examples:
+        - "Past 25"
+    first_value:
+      type: string
+      title: First value
+      default: past
+      examples:
+        - past
+    second_label:
+      type: string
+      title: Second label
+      default: "Next 25"
+      examples:
+        - "Next 25"
+    second_value:
+      type: string
+      title: Second value
+      default: future
+      examples:
+        - future
+    target_selector:
+      type: string
+      title: Toggle target selector
+      default: "[data-toggle-item]"
+      examples:
+        - "[data-toggle-item]"

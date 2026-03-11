@@ -17,14 +17,3 @@ props:
       type: string
       title: Ecosystem subtitle
       default: Product, agencies, and community — each strengthening the others.
-    tracks:
-      type: array
-      title: Tracks
-      items:
-        type: object
-        additionalProperties: true
-    tracks_url:
-      type: string
-      title: Tracks URL
-      format: uri-reference
-      default: /tracks

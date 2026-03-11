@@ -1,0 +1,221 @@
+uuid: d8a11098-1691-4b8d-9473-f0d734ed1090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_image
+    - field.storage.node.field_description
+    - field.storage.node.field_end
+    - field.storage.node.field_signals
+    - field.storage.node.field_source_id
+    - field.storage.node.field_start
+    - field.storage.node.field_tagline
+    - node.type.lab
+  module:
+    - datetime
+    - media
+    - node
+    - svg_image
+    - taxonomy
+    - user
+id: vision25_labs
+label: 'Vision 25 Labs'
+module: node
+description: 'Public labs grid grouped by lab for the Vision 25 labs page.'
+tag: vision25
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: Labs
+      fields:
+        field_source_id:
+          id: field_source_id
+          table: node__field_source_id
+          field: field_source_id
+          relationship: none
+          plugin_id: field
+          exclude: true
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          plugin_id: field
+        field_tagline:
+          id: field_tagline
+          table: node__field_tagline
+          field: field_tagline
+          relationship: none
+          plugin_id: field
+        field_description:
+          id: field_description
+          table: node__field_description
+          field: field_description
+          relationship: none
+          plugin_id: field
+        track_name:
+          id: track_name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_track
+          plugin_id: field
+        field_signals:
+          id: field_signals
+          table: node__field_signals
+          field: field_signals
+          relationship: none
+          plugin_id: field
+          exclude: true
+          separator: '||'
+        field_media_image:
+          id: field_media_image
+          table: media__field_media_image
+          field: field_media_image
+          relationship: field_image
+          plugin_id: field
+          type: image
+          settings:
+            image_link: ''
+            image_style: ''
+            image_loading:
+              attribute: lazy
+        related_session_title:
+          id: related_session_title
+          table: node_field_data
+          field: title
+          relationship: reverse__node__field_lab
+          plugin_id: field
+          exclude: true
+        related_session_start:
+          id: related_session_start
+          table: node__field_start
+          field: field_start
+          relationship: reverse__node__field_lab
+          plugin_id: field
+          exclude: true
+          type: timestamp
+          settings:
+            date_format: custom
+            custom_date_format: 'H:i'
+            timezone: ''
+        related_session_end:
+          id: related_session_end
+          table: node__field_end
+          field: field_end
+          relationship: reverse__node__field_lab
+          plugin_id: field
+          exclude: true
+          type: timestamp
+          settings:
+            date_format: custom
+            custom_date_format: 'H:i'
+            timezone: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+      sorts:
+        field_sort_order_value:
+          id: field_sort_order_value
+          table: node__field_sort_order
+          field: field_sort_order_value
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            lab: lab
+      style:
+        type: default
+        options:
+          default_row_class: false
+      row:
+        type: fields
+      query:
+        type: views_query
+      relationships:
+        field_track:
+          id: field_track
+          table: node__field_track
+          field: field_track
+          plugin_id: standard
+          required: true
+        field_image:
+          id: field_image
+          table: node__field_image
+          field: field_image
+          plugin_id: standard
+          required: true
+        reverse__node__field_lab:
+          id: reverse__node__field_lab
+          table: node_field_data
+          field: reverse__node__field_lab
+          plugin_id: entity_reverse
+          required: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_media_image'
+        - 'config:field.storage.node.field_description'
+        - 'config:field.storage.node.field_end'
+        - 'config:field.storage.node.field_signals'
+        - 'config:field.storage.node.field_source_id'
+        - 'config:field.storage.node.field_start'
+        - 'config:field.storage.node.field_tagline'
+  block_1:
+    id: block_1
+    display_title: 'Labs grid'
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Vision 25 labs'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_media_image'
+        - 'config:field.storage.node.field_description'
+        - 'config:field.storage.node.field_end'
+        - 'config:field.storage.node.field_signals'
+        - 'config:field.storage.node.field_source_id'
+        - 'config:field.storage.node.field_start'
+        - 'config:field.storage.node.field_tagline'

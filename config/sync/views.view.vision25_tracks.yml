@@ -1,0 +1,180 @@
+uuid: 7ee3dec3-7a22-4bf5-9c38-67bf30dfe501
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_image
+    - node.type.session
+  module:
+    - media
+    - node
+    - svg_image
+    - taxonomy
+    - user
+id: vision25_tracks
+label: 'Vision 25 Tracks'
+module: node
+description: 'Public track sections for the Vision 25 tracks page.'
+tag: vision25
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: Tracks
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          plugin_id: field
+          exclude: true
+        track_media_image:
+          id: track_media_image
+          table: media__field_media_image
+          field: field_media_image
+          relationship: track_image
+          plugin_id: field
+          exclude: true
+          type: image
+          settings:
+            image_link: ''
+            image_style: ''
+            image_loading:
+              attribute: lazy
+        lab_media_image:
+          id: lab_media_image
+          table: media__field_media_image
+          field: field_media_image
+          relationship: lab_image
+          plugin_id: field
+          exclude: true
+          type: image
+          settings:
+            image_link: ''
+            image_style: ''
+            image_loading:
+              attribute: lazy
+      pager:
+        type: none
+        options:
+          offset: 0
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+      sorts:
+        track_weight:
+          id: track_weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_track
+          plugin_id: standard
+          order: ASC
+        field_start:
+          id: field_start
+          table: node__field_start
+          field: field_start
+          plugin_id: datetime
+          order: ASC
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            session: session
+      style:
+        type: default
+        options:
+          default_row_class: false
+      row:
+        type: fields
+      query:
+        type: views_query
+      relationships:
+        field_track:
+          id: field_track
+          table: node__field_track
+          field: field_track
+          plugin_id: standard
+          required: true
+        field_room:
+          id: field_room
+          table: node__field_room
+          field: field_room
+          plugin_id: standard
+          required: true
+        field_lab:
+          id: field_lab
+          table: node__field_lab
+          field: field_lab
+          plugin_id: standard
+          required: true
+        track_image:
+          id: track_image
+          table: taxonomy_term__field_image
+          field: field_image
+          relationship: field_track
+          plugin_id: standard
+          required: false
+        lab_image:
+          id: lab_image
+          table: node__field_image
+          field: field_image
+          relationship: field_lab
+          plugin_id: standard
+          required: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_media_image'
+  block_1:
+    id: block_1
+    display_title: 'Track sections'
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Vision 25 track sections'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_media_image'

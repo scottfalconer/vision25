@@ -1,0 +1,26 @@
+uuid: c64f3dfb-66c1-43f3-aab6-96976c74d87a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vision25_labs
+  module:
+    - views
+active_version: dcc0f7e4fd324356
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:vision25_labs-block_1'
+        label: 'Vision 25 labs'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 labs'
+id: block.views_block.vision25_labs-block_1
+provider: views
+source: block
+source_local_id: 'views_block:vision25_labs-block_1'

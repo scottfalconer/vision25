@@ -1,0 +1,17 @@
+{% if view.result %}
+  <div class="section-container vision25-stack--wide vision25-timeline is-hidden" data-toggle-item="future">
+    {% for result_row in view.result %}
+      {% set milestone = result_row._entity %}
+      <article class="vision25-timeline__item" data-scroll-reveal>
+        <span class="vision25-timeline__dot"></span>
+        <div class="vision25-timeline__content">
+          <p class="heading-card">{{ milestone.field_year.value }}</p>
+          <p class="body-large">{{ milestone.label }}</p>
+        </div>
+        <div class="vision25-timeline__image glass-card-elevated">{{ view.style_plugin.getField(loop.index0, 'field_media_image') }}</div>
+      </article>
+    {% endfor %}
+  </div>
+{% elseif empty %}
+  {{ empty }}
+{% endif %}

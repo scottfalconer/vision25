@@ -1,0 +1,26 @@
+uuid: abf4e92b-c1f1-4f98-8e75-a7674fe23324
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vision25_track_navigation
+  module:
+    - views
+active_version: fb3fe20089f61a07
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:vision25_track_navigation-block_1'
+        label: 'Vision 25 home track navigation'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 home track navigation'
+id: block.views_block.vision25_track_navigation-block_1
+provider: views
+source: block
+source_local_id: 'views_block:vision25_track_navigation-block_1'

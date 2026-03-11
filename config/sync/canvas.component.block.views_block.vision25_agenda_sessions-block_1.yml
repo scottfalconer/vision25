@@ -1,0 +1,26 @@
+uuid: e6c62929-616f-48a5-ba57-f0f24cf1c2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vision25_agenda_sessions
+  module:
+    - views
+active_version: aa7e792a7e53e538
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:vision25_agenda_sessions-block_1'
+        label: 'Vision 25 agenda sessions'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 agenda sessions'
+id: block.views_block.vision25_agenda_sessions-block_1
+provider: views
+source: block
+source_local_id: 'views_block:vision25_agenda_sessions-block_1'

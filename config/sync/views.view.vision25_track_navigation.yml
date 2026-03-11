@@ -1,0 +1,108 @@
+uuid: c6745313-04a1-4ced-8727-d6c0c4154bae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_source_id
+    - taxonomy.vocabulary.track
+  module:
+    - taxonomy
+    - user
+id: vision25_track_navigation
+label: 'Vision 25 Track Navigation'
+module: taxonomy
+description: 'Track navigation links for the public home ecosystem section.'
+tag: vision25
+base_table: taxonomy_term_field_data
+base_field: tid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Track navigation'
+      fields:
+        field_source_id:
+          id: field_source_id
+          table: taxonomy_term__field_source_id
+          field: field_source_id
+          relationship: none
+          plugin_id: field
+          exclude: true
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          plugin_id: field
+          exclude: true
+      pager:
+        type: none
+        options:
+          offset: 0
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          plugin_id: standard
+          order: ASC
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          operator: in
+          value:
+            track: track
+      style:
+        type: default
+        options:
+          default_row_class: false
+      row:
+        type: fields
+      query:
+        type: views_query
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_source_id'
+  block_1:
+    id: block_1
+    display_title: 'Track navigation'
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Vision 25 home track navigation'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.taxonomy_term.field_source_id'

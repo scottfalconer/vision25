@@ -8,8 +8,10 @@ weight: 0
 items:
   - sdc.vision25.vision25-content-model
   - sdc.vision25.vision25-cta-band
+  - sdc.vision25.vision25-ecosystem
   - sdc.vision25.vision25-hero
   - sdc.vision25.vision25-media-interlude
   - sdc.vision25.vision25-narrative-section
   - sdc.vision25.vision25-section-intro
   - sdc.vision25.vision25-system-explorer
+  - sdc.vision25.vision25-toggle-controls

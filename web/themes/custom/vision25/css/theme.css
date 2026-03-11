@@ -327,6 +327,14 @@ img {
   text-align: center;
 }
 
+.vision25-ecosystem--header {
+  padding-block-end: 0;
+}
+
+.vision25-ecosystem-nav {
+  padding-block-start: 1.5rem;
+}
+
 .vision25-hero {
   position: relative;
   display: flex;

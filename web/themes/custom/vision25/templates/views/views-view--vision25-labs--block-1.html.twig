@@ -1,0 +1,109 @@
+{% if view.result %}
+  {% set lab_groups = {} %}
+  {% for result_row in view.result %}
+    {% set lab = result_row._entity %}
+    {% set lab_id = lab.field_source_id.value ?: lab.id %}
+    {% set existing_rows = lab_groups[lab_id]|default([]) %}
+    {% set lab_groups = lab_groups|merge({ (lab_id): existing_rows|merge([{ row: result_row, index: loop.index0 }]) }) %}
+  {% endfor %}
+
+  <section class="safe-frame vision25-page-section vision25-page-section--tight-top">
+    <div class="section-container vision25-stack--wide">
+      <div class="vision25-card-grid">
+        {% for lab_id, entries in lab_groups %}
+          {% set first_entry = entries|first %}
+          {% set lab = first_entry.row._entity %}
+          {% set track = first_entry.row._relationship_entities.field_track ?? null %}
+          {% set image = view.style_plugin.getField(first_entry.index, 'field_media_image') %}
+          {% set seen_sessions = {} %}
+
+          <div id="{{ lab_id }}">
+            <button
+              class="vision25-card vision25-card--media glass-card-elevated"
+              type="button"
+              data-dialog-open="#lab-modal-{{ lab_id }}"
+              aria-controls="lab-modal-{{ lab_id }}"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              data-scroll-reveal
+            >
+              <div class="vision25-card__media">{{ image }}</div>
+              <div class="vision25-card__body">
+                {% if track %}
+                  <p class="label-mono">{{ track.name.value }}</p>
+                {% endif %}
+                <h2 class="heading-card">{{ lab.label }}</h2>
+                <p class="vision25-meta">{{ lab.field_tagline.value }}</p>
+                <p class="body-base">{{ lab.field_description.value }}</p>
+              </div>
+            </button>
+          </div>
+
+          <div
+            class="vision25-modal"
+            data-dialog
+            id="lab-modal-{{ lab_id }}"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lab-modal-title-{{ lab_id }}"
+            aria-describedby="lab-modal-summary-{{ lab_id }}"
+            hidden
+          >
+            <div class="vision25-modal__panel glass-card-elevated" tabindex="-1">
+              <div class="vision25-modal__image">{{ image }}</div>
+              {% if track %}
+                <p class="label-mono">{{ track.name.value }}</p>
+              {% endif %}
+              <h2 class="heading-card" id="lab-modal-title-{{ lab_id }}">{{ lab.label }}</h2>
+              <p class="vision25-meta">{{ lab.field_tagline.value }}</p>
+              <p class="body-large" id="lab-modal-summary-{{ lab_id }}">{{ lab.field_description.value }}</p>
+              {% if lab.field_signals is not empty %}
+                <section class="vision25-stack">
+                  <h3 class="heading-card">{{ 'Signals'|t }}</h3>
+                  <ul>
+                    {% for signal in lab.field_signals %}
+                      <li class="body-base">{{ signal.value }}</li>
+                    {% endfor %}
+                  </ul>
+                </section>
+              {% endif %}
+              {% set has_related_sessions = false %}
+              {% for entry in entries %}
+                {% set session = entry.row._relationship_entities['reverse__node__field_lab'] ?? null %}
+                {% if session %}
+                  {% set has_related_sessions = true %}
+                {% endif %}
+              {% endfor %}
+              {% if has_related_sessions %}
+                <section class="vision25-stack">
+                  <h3 class="heading-card">{{ 'Related Sessions'|t }}</h3>
+                  <div class="vision25-stack">
+                    {% for entry in entries %}
+                      {% set session = entry.row._relationship_entities['reverse__node__field_lab'] ?? null %}
+                      {% if session and not seen_sessions[session.id()]|default(false) %}
+                        {% set seen_sessions = seen_sessions|merge({ (session.id()): true }) %}
+                        <article class="glass-card">
+                          <div class="vision25-card__body">
+                            <p class="vision25-time">
+                              {{ session.field_start.value ? session.field_start.value|date('H:i') : '' }}–{{ session.field_end.value ? session.field_end.value|date('H:i') : '' }}
+                            </p>
+                            <p class="body-base"><strong>{{ session.label }}</strong></p>
+                          </div>
+                        </article>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </section>
+              {% endif %}
+              <button class="vision25-modal__close" type="button" data-dialog-close aria-label="{{ 'Close dialog'|t }}">
+                {{ 'Close'|t }} <span aria-hidden="true">✕</span>
+              </button>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% elseif empty %}
+  {{ empty }}
+{% endif %}

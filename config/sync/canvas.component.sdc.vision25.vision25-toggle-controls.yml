@@ -1,0 +1,68 @@
+uuid: 8778406b-0b61-4a37-82c2-1af8dce801ce
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vision25
+active_version: 178fab1412ad817c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        first_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Past 25'
+          expression: ℹ︎string␟value
+        first_value:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: past
+          expression: ℹ︎string␟value
+        second_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Next 25'
+          expression: ℹ︎string␟value
+        second_value:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: future
+          expression: ℹ︎string␟value
+        target_selector:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '[data-toggle-item]'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vision 25 Toggle Controls'
+id: sdc.vision25.vision25-toggle-controls
+provider: vision25
+source: sdc
+source_local_id: 'vision25:vision25-toggle-controls'

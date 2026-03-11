@@ -7,3 +7,10 @@ configEntityTypeId: component
 weight: 0
 items:
   - block.views_block.recent_pages-block_recent_pages
+  - block.views_block.vision25_agenda_sessions-block_1
+  - block.views_block.vision25_agenda_tracks-block_1
+  - block.views_block.vision25_labs-block_1
+  - block.views_block.vision25_timeline-block_future
+  - block.views_block.vision25_timeline-block_past
+  - block.views_block.vision25_track_navigation-block_1
+  - block.views_block.vision25_tracks-block_1

@@ -1,0 +1,26 @@
+uuid: 383edd0d-fc51-4dce-908d-bf012b47c3db
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vision25_tracks
+  module:
+    - views
+active_version: dcb33d8301c668ca
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:vision25_tracks-block_1'
+        label: 'Vision 25 track sections'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vision 25 track sections'
+id: block.views_block.vision25_tracks-block_1
+provider: views
+source: block
+source_local_id: 'views_block:vision25_tracks-block_1'

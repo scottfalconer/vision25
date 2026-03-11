@@ -1,0 +1,89 @@
+{% if view.result %}
+  {% set track_groups = {} %}
+  {% for result_row in view.result %}
+    {% set track = result_row._relationship_entities.field_track ?? null %}
+    {% if track %}
+      {% set track_id = track.field_source_id.value ?: track.id %}
+      {% set existing_rows = track_groups[track_id]|default([]) %}
+      {% set track_groups = track_groups|merge({ (track_id): existing_rows|merge([{ row: result_row, index: loop.index0 }]) }) %}
+    {% endif %}
+  {% endfor %}
+
+  {% for track_id, entries in track_groups %}
+    {% set first_entry = entries|first %}
+    {% set track = first_entry.row._relationship_entities.field_track ?? null %}
+    {% set track_image = view.style_plugin.getField(first_entry.index, 'track_media_image') %}
+    {% set seen_labs = {} %}
+
+    <section class="safe-frame" id="{{ track_id }}">
+      <div class="vision25-track-hero">
+        <div class="vision25-track-hero__image">
+          {{ track_image }}
+          <div class="vision25-track-hero__overlay"></div>
+        </div>
+        <div class="vision25-track-hero__content">
+          <div class="section-container vision25-stack">
+            <p class="label-mono">Track {{ '%02d'|format(loop.index) }}</p>
+            <h2 class="heading-section">{{ track.label }}</h2>
+            <p class="body-large">{{ track.field_summary.value }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-container vision25-stack--wide">
+        <section data-scroll-reveal>
+          <h3 class="heading-card">{{ 'Sessions'|t }}</h3>
+          <div class="vision25-card-grid">
+            {% for entry in entries %}
+              {% set session = entry.row._entity %}
+              {% set room = entry.row._relationship_entities.field_room ?? null %}
+              <article class="vision25-card glass-card-elevated">
+                <span class="vision25-card__row">
+                  <span class="vision25-time">
+                    {{ session.field_start.value ? session.field_start.value|date('H:i') : '' }}–{{ session.field_end.value ? session.field_end.value|date('H:i') : '' }}
+                  </span>
+                  {% if session.field_session_type.value %}
+                    <span class="pill-tag">{{ session.field_session_type.value }}</span>
+                  {% endif %}
+                </span>
+                <h4 class="heading-card">{{ session.label }}</h4>
+                <p class="body-base">{{ session.field_summary.value }}</p>
+                {% if room %}
+                  <span class="vision25-meta">{{ room.name.value }}</span>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section data-scroll-reveal>
+          <h3 class="heading-card">{{ 'Related Labs'|t }}</h3>
+          <div class="vision25-card-grid">
+            {% for entry in entries %}
+              {% set lab = entry.row._relationship_entities.field_lab ?? null %}
+              {% if lab %}
+                {% set lab_id = lab.field_source_id.value ?: lab.id %}
+                {% if not seen_labs[lab_id]|default(false) %}
+                  {% set seen_labs = seen_labs|merge({ (lab_id): true }) %}
+                  <a class="vision25-card vision25-card--media glass-card-elevated" href="/labs#{{ lab_id }}">
+                    <div class="vision25-card__media">
+                      {{ view.style_plugin.getField(entry.index, 'lab_media_image') }}
+                    </div>
+                    <div class="vision25-card__body">
+                      <p class="label-mono">{{ track.label }}</p>
+                      <h4 class="heading-card">{{ lab.label }}</h4>
+                      <p class="vision25-meta">{{ lab.field_tagline.value }}</p>
+                      <p class="body-base">{{ lab.field_description.value }}</p>
+                    </div>
+                  </a>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </section>
+  {% endfor %}
+{% elseif empty %}
+  {{ empty }}
+{% endif %}

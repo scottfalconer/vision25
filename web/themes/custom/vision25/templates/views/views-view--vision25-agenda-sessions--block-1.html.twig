@@ -1,0 +1,98 @@
+{% if view.result %}
+  {% set previous_slot = '' %}
+  <div class="section-container vision25-stack--wide">
+    <div class="vision25-stack--wide">
+      {% for result_row in view.result %}
+        {% set session = result_row._entity %}
+        {% set track = result_row._relationship_entities.field_track ?? null %}
+        {% set room = result_row._relationship_entities.field_room ?? null %}
+        {% set lab = result_row._relationship_entities.field_lab ?? null %}
+        {% set session_id = session.field_source_id.value ?: session.id %}
+        {% set start = session.field_start.value ? session.field_start.value|date('H:i') : '' %}
+        {% set end = session.field_end.value ? session.field_end.value|date('H:i') : '' %}
+        {% set slot = start ~ '–' ~ end %}
+        {% set track_id = track and track.field_source_id.value ? track.field_source_id.value : '' %}
+        {% set session_type = session.field_session_type.value ?? '' %}
+
+        {% if slot != previous_slot %}
+          {% if not loop.first %}
+              </div>
+            </section>
+          {% endif %}
+          <section data-scroll-reveal>
+            <p class="vision25-time">{{ slot }}</p>
+            <div class="vision25-card-grid">
+          {% set previous_slot = slot %}
+        {% endif %}
+
+        <button
+          class="vision25-card glass-card-elevated"
+          type="button"
+          data-dialog-open="#agenda-modal-{{ session_id }}"
+          aria-controls="agenda-modal-{{ session_id }}"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          data-session-item
+          data-track="{{ track_id }}"
+        >
+          <span class="vision25-card__row">
+            <span class="vision25-time">{{ slot }}</span>
+            {% if session_type %}
+              <span class="pill-tag">{{ session_type }}</span>
+            {% endif %}
+          </span>
+          <h2 class="heading-card">{{ session.label }}</h2>
+          <p class="body-base">{{ session.field_summary.value }}</p>
+          <span class="vision25-card__chips">
+            {% if room %}
+              <span class="vision25-meta">{{ room.name.value }}</span>
+            {% endif %}
+            {% if track %}
+              <span class="pill-tag">{{ track.name.value }}</span>
+            {% endif %}
+            {% if lab %}
+              <span class="pill-tag">{{ lab.label }}</span>
+            {% endif %}
+          </span>
+        </button>
+
+        <div
+          class="vision25-modal"
+          data-dialog
+          id="agenda-modal-{{ session_id }}"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="agenda-modal-title-{{ session_id }}"
+          aria-describedby="agenda-modal-summary-{{ session_id }}"
+          hidden
+        >
+          <div class="vision25-modal__panel glass-card-elevated" tabindex="-1">
+            <p class="vision25-time">{{ slot }}</p>
+            <h2 class="heading-card" id="agenda-modal-title-{{ session_id }}">{{ session.label }}</h2>
+            {% if room %}
+              <p class="vision25-meta">{{ room.name.value }}</p>
+            {% endif %}
+            <p class="body-large" id="agenda-modal-summary-{{ session_id }}">{{ session.field_summary.value }}</p>
+            <div class="vision25-card__chips">
+              {% if track %}
+                <span class="pill-tag">{{ track.name.value }}</span>
+              {% endif %}
+              {% if lab %}
+                <span class="pill-tag">{{ lab.label }}</span>
+              {% endif %}
+            </div>
+            <button class="vision25-modal__close" type="button" data-dialog-close aria-label="{{ 'Close dialog'|t }}">
+              {{ 'Close'|t }} <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+        </div>
+      {% endfor %}
+      {% if view.result %}
+          </div>
+        </section>
+      {% endif %}
+    </div>
+  </div>
+{% elseif empty %}
+  {{ empty }}
+{% endif %}
